@@ -1,0 +1,4 @@
+- name: Install JDK
+  package:
+    name: "adoptopenjdk-{{jdk_version}}-hotspot"
+    state: present

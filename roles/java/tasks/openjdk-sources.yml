@@ -1,0 +1,10 @@
+- name: Add AdoptOpenJDK repo key
+  apt_key:
+    url: https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+    state: present
+    
+- name: Add AdoptOpenJDK repo to APT
+  apt_repository:
+    repo: "deb https://adoptopenjdk.jfrog.io/adoptopenjdk/deb {{ ansible_distribution_release }} main"
+    state: present
+

@@ -1,0 +1,6 @@
+- name: Install prerequisite packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - software-properties-common
